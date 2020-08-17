@@ -1,21 +1,29 @@
 // ******************* EXERCÍCIO 4 *******************
+var listaElementos = document.querySelector("ul");
+var input = document.querySelector("input");
+var button = document.querySelector("button");
 
-function experiencia(anos) {
-  if (anos <= 1) {
-    return "Iniciante";
-  } else if (anos > 1 && anos <= 3) {
-    return "Intermediário";
-  } else if (anos > 3 && anos <= 6) {
-    return "Avançado";
-  } else {
-    return "Jedi Master";
+var nomes = ["Diego", "Gabriel", "Lucas"];
+
+function adicionarNomes() {
+  listaElementos.innerHTML = ""; //limpar a lista
+
+  for (var i = 0; i < nomes.length; i++) {
+    var itemLista = document.createElement("li");
+    var itemListaTexto = document.createTextNode(nomes[i]);
+
+    itemLista.appendChild(itemListaTexto);
+    listaElementos.appendChild(itemLista);
   }
 }
-var anosEstudo = 2;
-var resultado = experiencia(anosEstudo);
-// De 0-1 ano: Iniciante
-// De 1-3 anos: Intermediário
-// De 3-6 anos: Avançado
-// De 7 acima: Jedi Master
+adicionarNomes();
 
-console.log(resultado);
+function adicionarNovo() {
+  var itemListaTexto = input.value;
+
+  nomes.push(itemListaTexto);
+  input.value = "";
+  adicionarNomes();
+}
+
+button.onclick = adicionarNovo;
