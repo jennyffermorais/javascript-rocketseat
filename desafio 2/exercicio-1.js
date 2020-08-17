@@ -10,3 +10,4 @@ function criarQuadrado() {
   var containerElement = document.querySelector("#quadrados");
   containerElement.appendChild(quadrado);
 }
+
