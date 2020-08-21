@@ -1,4 +1,4 @@
-// ************************  EXERCÍCIO 1  *************************
+// ******************************  EXERCÍCIO 1  ******************************
 
 // Crie uma função que recebe a idade de um usuário e retorna uma Promise que depois de 2
 // segundos retornará se usuário é maior ou não que 18 anos. Se o usuário ter mais que 18 anos de
